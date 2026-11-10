@@ -8,6 +8,7 @@ public class InteratorExaemple {
         list.add("Apple");
         list.add("Banana");
 
+        
         Iterator<String> iterator = list.iterator();
         while(iterator.hasNext()) {
             System.out.println(iterator.next());
