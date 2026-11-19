@@ -216,9 +216,9 @@ class CoinProcessor {
 		int five = fivebahtCoin + coins[1];
 		int ten = tenbahtCoin + coins[2];
 
-		for(int t = 0; t <= ten; t++) {
+		for(int o = 0; o <= one; o++) {
 			for(int f = 0; f <= five; f++) {
-				for(int o = 0; o <= one; o++) {
+				for(int t = 0; t <= ten; t++) {
 
 					if(t * 10 + f * 5 + o == money) {
 
