@@ -1,32 +1,51 @@
-class Book {
-    public String title;
-    public String author;
-    public double price;
-    private boolean available;
+import java.util.Scanner;
 
-    public Book(String title, String author, double price) {
+class Library {
+    private String title;
+    private String author;
+    private double price;
+
+    Library(String title , String author , double price) {
         this.title = title;
         this.author = author;
         this.price = price;
-        this.available = true;
     }
 
-    public void borrowBook() {
-        if(available == true) {
-            available = false;
-            System.out.println("Book borrowed successfully.");
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setPrice(double price) {
+        if(price > 0) {
+            this.price = price;
         } else {
-            System.out.println("Book is already borrowed.");
+            System.out.println("Invalid price. Price not changed. Current price: %.1f".formatted(this.price));
         }
-    }
+    } 
 
-    public void returnBook() {
-        available = true;
-        System.out.println("Book returned successfully.");
+    public double getPrice() {
+        return price;
     }
+  
+}
 
-    public boolean isAvailable() {
-        return available;
+public class Book {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Library book = new Library("Java Basics", "James Gosling", 50.0);
+        book.setPrice(-10);
+        sc.close();
     }
-
 }

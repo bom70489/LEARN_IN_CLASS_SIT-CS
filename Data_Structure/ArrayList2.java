@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Scanner;
 
 public class ArrayList2 {
@@ -15,7 +14,7 @@ public class ArrayList2 {
             nums.add(sc.nextInt());
         }
 
-        Collections.sort(nums);
+        nums.sort(null);
         int size = nums.size();
         double median = 0;
         sc.close();
